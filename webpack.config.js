@@ -33,7 +33,7 @@ module.exports={
     output:{
       path:dist+"/app/",
       filename:'bundel.js',
-      publicPath:"/app/"
+      publicPath:"/dist/app"
     },
     module:{
         rules:[

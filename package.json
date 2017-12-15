@@ -7,7 +7,10 @@
     "start": "npm run build",
     "build": "webpack -d",
     "bw":"npm run build-watch",
-    "build-watch":"webpack -d --watch"
+    "serve":"webpack-dev-server --content-base src --inline --hot",
+    "build-watch":"webpack -d --watch",
+    "prod":"webpack -p"
+
 
   },
   "keywords": [
