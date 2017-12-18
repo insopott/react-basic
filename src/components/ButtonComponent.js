@@ -7,21 +7,22 @@ class ButtonComponent extends React.Component{
       message:"Hello"
     };
   }
-  changeText(){
+  changeText(event){
+    console.log(event.target.value);
     this.setState({
-      message:"Something",
+        message:event.target.value
     });
   }
   render(){
       return (
         <div className="row">
-            <div className="col-md-3">
+            <div className="col m3">
                 <button className="btn btn-warning">Click Me</button>
             </div>
-            <div className="col-md-3">
-                <input id="text"  onBlur={()=>this.changeText()}className="form-control"/>
+            <div className="col m3 ">
+                <input id="text" value={this.state.message}  onChange={this.changeText.bind(this)} className="form-control"/>
             </div>
-            <div className="col-md-6">
+            <div className="col m6 right">
                 <Alert message={this.state.message}/>
             </div>
 
