@@ -10,7 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports={
     entry:{bundle:[
         './src/app/index.js',
-        './src/app/css/materialize.css'
+        './src/app/css/materialize.css',
           './src/app/css/style.css'
       ],
      app:[

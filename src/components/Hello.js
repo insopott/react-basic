@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Button from "./ButtonComponent";
 import Footer from "./FooterComponent";
+import Clock from "./Clock";
 class Home extends React.Component {
     render () {
       return (
@@ -16,6 +17,7 @@ class Home extends React.Component {
           <main>
             <div className="container">
                 <Button/>
+                <Clock/>
             </div>
           </main>
           <Footer/>
