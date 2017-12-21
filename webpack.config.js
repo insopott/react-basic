@@ -11,7 +11,7 @@ module.exports={
     entry:{bundle:[
         './src/app/index.js',
         './src/app/css/materialize.css',
-          './src/app/css/style.css'
+        './src/app/css/style.css'
       ],
      app:[
          './src/app/js/jquery.js',

@@ -20,7 +20,7 @@ class ButtonComponent extends React.Component{
                 <button className="btn btn-warning">Click Me</button>
             </div>
             <div className="col m3 ">
-                <input id="text" value={this.state.message}  onChange={this.changeText.bind(this)} className="form-control"/>
+                <input id="text"  value={this.state.message}  onChange={this.changeText.bind(this)} className="form-control"/>
             </div>
             <div className="col m6 right">
                 <Alert message={this.state.message}/>
