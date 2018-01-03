@@ -21,13 +21,13 @@ class Home extends React.Component {
                 <Clock/>
                 <br/>
                 <div className="row">
-                  <div className="col md4">
+                  <div className="col m4">
                     <ListContainer initialList={["yes"]}/>
                   </div>
-                  <div className="col md4">
+                  <div className="col m4">
                     <ListContainer initialList={["List2"]}/>
                   </div>
-                  <div className="col md4">
+                  <div className="col m4">
                     <ListContainer initialList={["List3"]}/>
                   </div>
                 </div>
