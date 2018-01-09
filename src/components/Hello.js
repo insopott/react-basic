@@ -22,13 +22,13 @@ class Home extends React.Component {
                 <br/>
                 <div className="row">
                   <div className="col m4">
-                    <ListContainer initialList={["yes"]}/>
+                    <ListContainer initialList={[]}/>
                   </div>
                   <div className="col m4">
-                    <ListContainer initialList={["List2"]}/>
+                    <ListContainer initialList={[]}/>
                   </div>
                   <div className="col m4">
-                    <ListContainer initialList={["List3"]}/>
+                    <ListContainer initialList={[]}/>
                   </div>
                 </div>
             </div>

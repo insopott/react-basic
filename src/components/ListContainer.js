@@ -11,7 +11,19 @@ export default class ListContainer extends React.Component {
   }
   submitForm(event){
     event.preventDefault();
-    console.log(this.refs);
+    var list=this.state.list;
+    var item=this.state.item;
+
+
+    if(item.length>0){
+        list.push(this.state.item);
+        item="";
+      this.setState({
+        list,item
+      });
+    }
+
+
   }
   addItem(event){
   //  value={this.state.item} onChange={this.changeItemText.bind(this)}
@@ -30,8 +42,25 @@ export default class ListContainer extends React.Component {
       item:event.target.value,
     });
   }
-
+  isListEmpty(){
+    if(this.state.list.length>0){
+      return (
+        <div className="row">
+          <div className="col m12">
+              <ul className="collection">
+                {this.state.list.map((item,index)=>
+                  <li className="collection-item"key={index}>{item}</li>
+                )}
+              </ul>
+          </div>
+        </div>
+      );
+    }else {
+      return (<p>No Items</p>);
+    }
+  }
   render(){
+    var l=this.isListEmpty();
     return (
       <div className="container">
         <div className="row">
@@ -48,15 +77,8 @@ export default class ListContainer extends React.Component {
             </div>
             </form>
         </div>
-        <div className="row">
-          <div className="col m12">
-              <ul className="collection">
-                {this.state.list.map((item,index)=>
-                  <li className="collection-item"key={index}>{item}</li>
-                )}
-              </ul>
-          </div>
-        </div>
+       {l}
+
       </div>
     );
   }
