@@ -42,6 +42,13 @@ export default class ListContainer extends React.Component {
       item:event.target.value,
     });
   }
+  remove(event,id){
+    var list=this.state.list;
+    list.splice(id);
+    this.setState({
+      list
+    });
+  }
   isListEmpty(){
     if(this.state.list.length>0){
       return (
@@ -49,7 +56,11 @@ export default class ListContainer extends React.Component {
           <div className="col m12">
               <ul className="collection">
                 {this.state.list.map((item,index)=>
-                  <li className="collection-item"key={index}>{item}</li>
+                  <li className="collection-item"key={index}>{item}
+                     <button className="btn btn-flat" onClick={e=>{this.remove(e,index)}}>
+                       Remove
+                     </button>
+                   </li>
                 )}
               </ul>
           </div>
