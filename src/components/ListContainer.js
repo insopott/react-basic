@@ -44,7 +44,7 @@ export default class ListContainer extends React.Component {
   }
   remove(event,id){
     var list=this.state.list;
-    list.splice(id);
+    list.splice(id,1);
     this.setState({
       list
     });
